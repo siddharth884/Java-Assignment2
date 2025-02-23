@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class A2ShowResult {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Hindi Marks out of 100 = ");
+		int hindi = sc.nextInt();
+		System.out.println("Enter English Marks out of 100 = ");
+		int english = sc.nextInt();
+		System.out.println("Enter Math Marks out of 100 = ");
+		int math = sc.nextInt();
+		System.out.println("Enter Physics Marks out of 100 = ");
+		int physics = sc.nextInt();
+		System.out.println("Enter Chemistry Marks out of 100 = ");
+		int chemistry = sc.nextInt();
+		
+		int totalMarks = hindi + english + math + physics + chemistry;
+        double percentage = (totalMarks / 500.0) * 100;
+        String grade = "";
+        
+        if (percentage >= 85) {
+            grade = "Excellent";
+        } else if (percentage >= 70) {
+            grade = "Very good";
+        } else if (percentage >= 55) {
+            grade = "Good";
+        } else if (percentage >= 40) {
+            grade = "Poor";
+        } else {
+            grade = "Very poor";
+        }
+        System.out.println("Percentage = "+ percentage);
+        System.out.println("Grade = " + grade);
+	}
+
+}
